@@ -30,9 +30,10 @@ async function run(): Promise<void> {
   })
 
   core.info('Overview of jobs:')
-
+  core.info('test')
   let count = 0
   for (const check_run of list_runs.data.check_runs) {
+    core.info(`- ${check_run.id}`)
     if (check_run.output.title) {
       core.info(`- ${check_run.output.title}: ${check_run.output.summary}`)
     }
